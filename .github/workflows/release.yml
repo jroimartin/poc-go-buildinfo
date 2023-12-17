@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,3 +24,5 @@ jobs:
           distribution: goreleaser
           version: v1.22.1
           args: release --clean
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
