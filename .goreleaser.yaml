@@ -2,10 +2,12 @@ project_name: poc-go-buildinfo
 gomod:
   proxy: true
 builds:
-  goos:
-    - linux
-    - darwin
-  goarch:
-    - amd64
-    - arm64
-    - 386
+  - id: poc-go-buildinfo
+    main: .
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+      - 386
