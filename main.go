@@ -23,4 +23,6 @@ func main() {
 	for _, dep := range info.Deps {
 		fmt.Printf("%v %v\n", dep.Path, dep.Version)
 	}
+
+	fmt.Println("test")
 }
