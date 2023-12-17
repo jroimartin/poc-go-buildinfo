@@ -1,9 +1,12 @@
-name: build
+name: Release
 
 on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -21,5 +24,3 @@ jobs:
           distribution: goreleaser
           version: v1.22.1
           args: release --clean
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
